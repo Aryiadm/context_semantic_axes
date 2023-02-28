@@ -83,7 +83,7 @@ def check_duplicate_months(d, months):
             print("DIFFERENCE", len(ids1 - ids2), len(ids2 - ids1))
         else: 
             print("IT IS FINE!!!!!!!!!!")
-
+# reuslts in JSON error          
 def get_dumb_lines(line): 
     try: 
         json.loads(line)
@@ -91,6 +91,8 @@ def get_dumb_lines(line):
         return True
     return False
 
+# code rn loops through every single file in reddit
+# TODO: modify to take in 1 month of reddit (make set a single subreddit)
 def extract_relevant_subreddits(in_d, out_d): 
     """
     Creates new files containing 
